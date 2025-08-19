@@ -1,4 +1,4 @@
-import { Tooltip } from "./components/Tooltip";
+import Spinner from "./components/Spinner";
 import { useState } from "react";
 
 function App() {
@@ -6,22 +6,8 @@ function App() {
 
   return (
     <>
-      <Tooltip text="بالا هستم!" position="top">
-        <button>Hover top</button>
-      </Tooltip>
-
-      <Tooltip text="پایین هستم!" position="bottom">
-        <button>Hover bottom</button>
-      </Tooltip>
-
-      <Tooltip text="چپ هستم!" position="left">
-        <button>Hover left</button>
-      </Tooltip>
-
-      <Tooltip text="راست هستم!" position="right">
-        <button>Hover right</button>
-      </Tooltip>
-
+      <Spinner size="60px" color="red" speed="0.5s" text="در حال بارگذاری..." />
+      <Spinner size="30px" color="green" speed="2s" />
     </>
 
   );
