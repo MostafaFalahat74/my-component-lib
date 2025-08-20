@@ -1,15 +1,22 @@
-import Spinner from "./components/Spinner";
-import { useState } from "react";
+import React from "react";
+import Dropdown from "./components/Dropdown";
 
 function App() {
-  const [gender, setGender] = useState("");
+  const items = [
+    { label: "🍎 سیب", value: "apple" },
+    { label: "🍌 موز", value: "banana" },
+    { label: "🍒 گیلاس", value: "cherry" },
+  ];
+
+  const handleSelect = (option) => {
+    console.log("انتخاب شد:", option);
+  };
 
   return (
-    <>
-      <Spinner size="60px" color="red" speed="0.5s" text="در حال بارگذاری..." />
-      <Spinner size="30px" color="green" speed="2s" />
-    </>
-
+    <div style={{ padding: "50px" }}>
+      <Dropdown label="میوه‌ها" options={items} onSelect={handleSelect} />
+    </div>
   );
 }
-export default App
+
+export default App;
